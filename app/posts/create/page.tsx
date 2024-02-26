@@ -13,6 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { z } from "zod";
 
 const formSchema = z.object({
@@ -49,9 +50,11 @@ const CreatePage = () => {
         },
         body: JSON.stringify({ username, tiq, content }),
       });
+      toast.success("投稿できました！")
       router.push("/");
       router.refresh();
     } catch (err) {
+      toast.error("投稿に失敗しました")
       console.error(err);
     }
   }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layouts/Header";
+import ToasterContext from "./context/ToasterContext";
 
 const fonts = Noto_Sans_JP({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className={fonts.className}>
         <Header />
+        <ToasterContext/>
         {children}
       </body>
     </html>
