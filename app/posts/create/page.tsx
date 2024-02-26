@@ -43,18 +43,18 @@ const CreatePage = () => {
     const { username, tiq, content } = value;
 
     try {
-      await fetch("http://localhost:3000/api/post", {
+      await fetch("https://post-ntnqr1tl7-kameiryohei.vercel.app/api/post", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ username, tiq, content }),
       });
-      toast.success("投稿できました！")
+      toast.success("投稿できました！");
       router.push("/");
       router.refresh();
     } catch (err) {
-      toast.error("投稿に失敗しました")
+      toast.error("投稿に失敗しました");
       console.error(err);
     }
   }
