@@ -43,7 +43,7 @@ const CreatePage = () => {
     const { username, tiq, content } = value;
 
     try {
-      await fetch("https://post-ntnqr1tl7-kameiryohei.vercel.app/api/post", {
+      await fetch("http://localhost:3000//api/post", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

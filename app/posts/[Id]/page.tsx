@@ -3,12 +3,9 @@ import Link from "next/link";
 import React from "react";
 
 async function getDetailBBSData(id: number) {
-  const response = await fetch(
-    `https://post-ntnqr1tl7-kameiryohei.vercel.app/api/post/${id}`,
-    {
-      cache: "no-store",
-    }
-  );
+  const response = await fetch(`http://localhost:3000//api/post/${id}`, {
+    cache: "no-store",
+  });
 
   const bbsDetailData: PostDate = await response.json();
 

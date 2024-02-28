@@ -23,7 +23,12 @@ const PostCard = ({ postcontent }: PostContent) => {
         </CardHeader>
         <CardContent>{content}</CardContent>
         <CardFooter className="flex justify-between">
-          <Link href={`/posts/${id}`}>Read more</Link>
+          <Link
+            href={`/posts/${id}`}
+            className="p-2 bg-gray-300 rounded-xl text-blue-900 hover:text-blue-500 transition duration-200"
+          >
+            もっと読む
+          </Link>
         </CardFooter>
       </Card>
     </div>
